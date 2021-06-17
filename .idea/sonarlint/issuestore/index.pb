@@ -4,14 +4,10 @@
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
-T
-$src/main/java/empleado/Empleado.java,5\d\5d6816fb66ef9962ecc43590b6a1c4fc94d7b0fc
 S
 #src/main/java/empleado/Funcion.java,d\1\d17c54d0b2180fe5476a8ce2a4e5e03fe105d60b
 Q
 !src/main/java/empleado/Cargo.java,a\5\a53b05912616ad26dfdfcfd40a307278d1fd3c32
-R
-"src/main/java/factura/Factura.java,a\6\a6efc5fbb17a771bfc3b55c679145d5b810c8da9
 Q
 !src/main/java/factura/Pedido.java,a\7\a7215056b1528ceb394e0d3a892aacd8aa329c09
 S
@@ -50,8 +46,6 @@ Y
 .src/main/java/factura/values/TipoProducto.java,3\3\33acafc1ca3be41fdd2e5a30c328f505b44d78f8
 a
 1src/main/java/empleado/values/Caracteristica.java,a\1\a1b12d9245d227af8cbc4d73a0751353298f61d0
-a
-1src/main/java/empleado/events/EmpleadoCreado.java,4\2\4290cb2c5447962e09c806886562dcafd51ba754
 b
 2src/main/java/empleado/events/FuncionAgregada.java,3\3\335f6d531a63c0569c579d91301b1a34231ec6d3
 d
