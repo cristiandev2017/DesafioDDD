@@ -1,2 +1,4 @@
-package empleado;public class Empleado {
+package empleado;
+
+public class Empleado {
 }
