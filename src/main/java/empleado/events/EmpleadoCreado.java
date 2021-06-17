@@ -1,6 +1,8 @@
 package empleado.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
+import empleado.Cargo;
+import empleado.Cuenta;
 import empleado.values.*;
 
 public class EmpleadoCreado extends DomainEvent {
@@ -9,17 +11,17 @@ public class EmpleadoCreado extends DomainEvent {
     private final Telefono telefono;
     private final Direccion direccion;
     //Relacionados
-    private final CuentaId cuentaId;
-    private final CargoId cargoId;
+    private final Cuenta cuenta;
+    private final Cargo cargo;
 
-    public EmpleadoCreado(Nombre nombre, Edad edad, Telefono telefono, Direccion direccion, CuentaId cuentaId, CargoId cargoId){
+    public EmpleadoCreado(Nombre nombre, Edad edad, Telefono telefono, Direccion direccion, Cuenta cuenta, Cargo cargo){
         super("sofka.empleado.empleadocreado");
         this.nombre = nombre;
         this.edad = edad;
         this.telefono = telefono;
         this.direccion = direccion;
-        this.cuentaId = cuentaId;
-        this.cargoId = cargoId;
+        this.cuenta = cuenta;
+        this.cargo = cargo;
     }
 
     public Nombre getNombre() {
@@ -38,11 +40,11 @@ public class EmpleadoCreado extends DomainEvent {
         return direccion;
     }
 
-    public CuentaId getCuentaId() {
-        return cuentaId;
+    public Cuenta getCuenta() {
+        return cuenta;
     }
 
-    public CargoId getCargoId() {
-        return cargoId;
+    public Cargo getCargo() {
+        return cargo;
     }
 }

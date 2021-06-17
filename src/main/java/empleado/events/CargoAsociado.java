@@ -1,16 +1,17 @@
 package empleado.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
+import empleado.Cargo;
 import empleado.values.CargoId;
 
 public class CargoAsociado extends DomainEvent {
-    private final CargoId cargoId;
-    public CargoAsociado(CargoId cargoId){
+    private final Cargo cargo;
+    public CargoAsociado(Cargo cargo){
         super("sofka.empleado.cargoasociado");
-        this.cargoId = cargoId;
+        this.cargo = cargo;
     }
 
-    public CargoId getCargoId() {
-        return cargoId;
+    public Cargo getCargo() {
+        return cargo;
     }
 }

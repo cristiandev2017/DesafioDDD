@@ -4,18 +4,6 @@
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
-S
-#src/main/java/empleado/Funcion.java,d\1\d17c54d0b2180fe5476a8ce2a4e5e03fe105d60b
-Q
-!src/main/java/empleado/Cargo.java,a\5\a53b05912616ad26dfdfcfd40a307278d1fd3c32
-Q
-!src/main/java/factura/Pedido.java,a\7\a7215056b1528ceb394e0d3a892aacd8aa329c09
-S
-#src/main/java/factura/Producto.java,1\9\19b5880bd6bce1f90c4465a6d75e90030c76b6ca
-R
-"src/main/java/factura/Cliente.java,c\5\c51f419771668d27933b108478a25473caeda7ba
-R
-"src/main/java/empleado/Cuenta.java,f\3\f3d5a5bb6cbe6281f9fef3d28788a144c19f84cf
 [
 +src/main/java/factura/values/ClienteId.java,9\4\94e367dc35ba104de532edaee9cf0f1acc16ca55
 [

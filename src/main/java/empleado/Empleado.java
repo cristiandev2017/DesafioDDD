@@ -16,12 +16,12 @@ public class Empleado extends AggregateEvent<EmpleadoId> {
     protected Direccion direccion;
     //Los relacionados
     protected Set<Funcion> funciones;
-    protected CuentaId cuentaId;
-    protected CargoId cargoId;
+    protected Cuenta cuenta;
+    protected Cargo cargo;
 
-    public Empleado(EmpleadoId entityId,Nombre nombre, Edad edad, Telefono telefono, Direccion direccion, CuentaId cuentaId, CargoId cargoId) {
+    public Empleado(EmpleadoId entityId,Nombre nombre, Edad edad, Telefono telefono, Direccion direccion, Cuenta cuenta, Cargo cargo) {
         super(entityId);
-        appendChange(new EmpleadoCreado(nombre,edad,telefono,direccion,cuentaId,cargoId)).apply();
+        appendChange(new EmpleadoCreado(nombre,edad,telefono,direccion,cuenta,cargo)).apply();
     }
 
     //Factoria
