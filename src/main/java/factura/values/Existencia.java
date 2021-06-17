@@ -9,11 +9,10 @@ public class Existencia implements ValueObject<Integer> {
 
     public Existencia(Integer value){
         this.value = Objects.requireNonNull(value);
-        //Se espera definir como validar si son numeros decimales porque si puede que no hayan existencias
-        /*
-        if(this.value<0){
+        //Se espera definir como validar si son numeros decimales porque si puede que no hayan existencias al ser integer ya valido que no me ingresen decimales
+        if (this.value <= 0 ){
+            throw new IllegalArgumentException("Debe tener valores positivos en la existencia");
         }
-         */
     }
 
     public Integer value(){

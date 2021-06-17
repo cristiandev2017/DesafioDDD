@@ -10,8 +10,8 @@ public class Edad implements ValueObject<Integer> {
     public Edad(Integer value){
         this.value = Objects.requireNonNull(value);
         //Validaciones
-        if (this.value <= 0){
-            throw new IllegalArgumentException("La edad no puede ser 0 o menor a 0");
+        if (this.value < 18 ){
+            throw new IllegalArgumentException("La edad no puede ser menor a 18");
         }
     }
     public Integer value(){return value;}
