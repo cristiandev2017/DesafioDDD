@@ -11,7 +11,7 @@ public class Detalle implements ValueObject<String> {
     public Detalle(String value){
         this.value = Objects.requireNonNull(value);
         if(this.value.isBlank()){
-            throw new IllegalArgumentException("la descripcion no puede estar vacia");
+            throw new IllegalArgumentException("el detalle no puede estar vacia");
         }
 
         if(this.value.length()<= 10){

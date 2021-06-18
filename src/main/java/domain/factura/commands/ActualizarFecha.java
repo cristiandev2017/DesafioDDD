@@ -3,23 +3,24 @@ package domain.factura.commands;
 import co.com.sofka.domain.generic.Command;
 import domain.empleado.values.Descripcion;
 import domain.factura.values.FacturaId;
+import domain.factura.values.Fecha;
 
 
 public class ActualizarFecha implements Command {
 
     private final FacturaId facturaId;
-    private final Descripcion fecha;
+    private final Fecha fecha;
 
-    public ActualizarFecha(FacturaId facturaId, Descripcion descripcion){
+    public ActualizarFecha(FacturaId facturaId, Fecha fecha){
         this.facturaId = facturaId;
-        this.fecha = descripcion;
+        this.fecha = fecha;
     }
 
     public FacturaId getFacturaId() {
         return facturaId;
     }
 
-    public Descripcion getFecha() {
+    public Fecha getFecha() {
         return fecha;
     }
 }

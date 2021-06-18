@@ -6,7 +6,7 @@ import domain.factura.values.Fecha;
 public class FechaActualizada extends DomainEvent {
     private final Fecha fecha;
     public FechaActualizada(Fecha fecha){
-        super("sofka.domain.factura.fechaactualizado");
+        super("sofka.domain.factura.fechactualizado");
         this.fecha = fecha;
     }
 

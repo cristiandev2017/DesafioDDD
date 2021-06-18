@@ -2,10 +2,6 @@ package usecase.factura;
 
 import co.com.sofka.business.generic.UseCaseHandler;
 import co.com.sofka.business.support.RequestCommand;
-import domain.empleado.Cargo;
-import domain.empleado.Cuenta;
-import domain.empleado.commands.CrearEmpleado;
-import domain.empleado.events.EmpleadoCreado;
 import domain.empleado.values.*;
 import domain.factura.Cliente;
 import domain.factura.Pedido;
@@ -15,10 +11,6 @@ import domain.factura.values.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import usecase.empleado.CrearEmpleadoUseCase;
-
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.*;
