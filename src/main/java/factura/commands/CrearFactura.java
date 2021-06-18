@@ -1,21 +1,23 @@
-package factura.events;
+package factura.commands;
 
-import co.com.sofka.domain.generic.DomainEvent;
+import co.com.sofka.domain.generic.Command;
 import empleado.values.Precio;
 import empleado.values.EmpleadoId;
 import factura.Cliente;
 import factura.Pedido;
+import factura.values.FacturaId;
 
-public class FacturaCreada extends DomainEvent {
-    private final Precio descripcion;
+public class CrearFactura implements Command {
+    private final FacturaId entityId;
     private final factura.values.Fecha fecha;
+    private final Precio descripcion;
     private final factura.values.Precio precio;
     private final Pedido pedido;
     private final Cliente cliente;
     private final EmpleadoId empleadoId;
 
-    public FacturaCreada(Precio descripcion, factura.values.Fecha fecha, factura.values.Precio precio, Pedido pedido, Cliente cliente, EmpleadoId empleadoId){
-        super("sofka.factura.facturacreada");
+    public CrearFactura(FacturaId entityId, Precio descripcion, factura.values.Fecha fecha, factura.values.Precio precio, Pedido pedido, Cliente cliente, EmpleadoId empleadoId){
+        this.entityId = entityId;
         this.descripcion = descripcion;
         this.fecha = fecha;
         this.precio = precio;
@@ -24,20 +26,20 @@ public class FacturaCreada extends DomainEvent {
         this.empleadoId = empleadoId;
     }
 
-    public Precio getDescripcion() {
-        return descripcion;
+    public FacturaId getEntityId() {
+        return entityId;
     }
 
     public factura.values.Fecha getFecha() {
         return fecha;
     }
 
-    public factura.values.Precio getPrecio() {
-        return precio;
+    public Precio getDescripcion() {
+        return descripcion;
     }
 
-    public EmpleadoId getEmpleadoId() {
-        return empleadoId;
+    public factura.values.Precio getPrecio() {
+        return precio;
     }
 
     public Pedido getPedido() {
@@ -46,5 +48,9 @@ public class FacturaCreada extends DomainEvent {
 
     public Cliente getCliente() {
         return cliente;
+    }
+
+    public EmpleadoId getEmpleadoId() {
+        return empleadoId;
     }
 }

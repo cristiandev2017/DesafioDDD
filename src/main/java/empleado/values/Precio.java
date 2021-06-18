@@ -4,10 +4,10 @@ import co.com.sofka.domain.generic.ValueObject;
 
 import java.util.Objects;
 
-public class Descripcion implements ValueObject<String> {
+public class Precio implements ValueObject<String> {
     private final String value;
 
-    public Descripcion(String value){
+    public Precio(String value){
         this.value = Objects.requireNonNull(value);
         //Validaciones
         if(this.value.isBlank()){
@@ -26,7 +26,7 @@ public class Descripcion implements ValueObject<String> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Descripcion that = (Descripcion) o;
+        Precio that = (Precio) o;
         return Objects.equals(value, that.value);
     }
 

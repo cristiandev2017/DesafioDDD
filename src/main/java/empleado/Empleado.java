@@ -44,7 +44,7 @@ public class Empleado extends AggregateEvent<EmpleadoId> {
         appendChange(new CaracteristicaFuncionActualizado(entityId,caracteristica));
     }
 
-    public void actualizarDescripcionDeFuncion(FuncionId entityId,Descripcion descripcion){
+    public void actualizarDescripcionDeFuncion(FuncionId entityId, Precio descripcion){
         appendChange(new DescripcionFuncionActualizada(entityId,descripcion));
     }
 
@@ -60,7 +60,7 @@ public class Empleado extends AggregateEvent<EmpleadoId> {
         appendChange(new TelefonoActualizado(telefono)).apply();
     }
 
-    public void agregarFuncion(FuncionId entityId, Caracteristica caracteristica, Descripcion descripcion){
+    public void agregarFuncion(FuncionId entityId, Caracteristica caracteristica, Precio descripcion){
         Objects.requireNonNull(entityId);
         Objects.requireNonNull(caracteristica);
         Objects.requireNonNull(descripcion);
@@ -90,4 +90,31 @@ public class Empleado extends AggregateEvent<EmpleadoId> {
         return funciones;
     }
 
+    public Nombre getNombre() {
+        return nombre;
+    }
+
+    public Edad getEdad() {
+        return edad;
+    }
+
+    public Telefono getTelefono() {
+        return telefono;
+    }
+
+    public Direccion getDireccion() {
+        return direccion;
+    }
+
+    public Set<Funcion> getFunciones() {
+        return funciones;
+    }
+
+    public Cuenta getCuenta() {
+        return cuenta;
+    }
+
+    public Cargo getCargo() {
+        return cargo;
+    }
 }

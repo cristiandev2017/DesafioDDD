@@ -2,7 +2,7 @@ package empleado.commands;
 
 import co.com.sofka.domain.generic.Command;
 import empleado.values.Caracteristica;
-import empleado.values.Descripcion;
+import empleado.values.Precio;
 import empleado.values.EmpleadoId;
 import empleado.values.FuncionId;
 
@@ -11,9 +11,9 @@ public class AgregarFuncion implements Command {
     private final EmpleadoId empleadoId;
     private final FuncionId entityId;
     private final Caracteristica caracteristica;
-    private final Descripcion descripcion;
+    private final Precio descripcion;
 
-    public AgregarFuncion(EmpleadoId empleadoId, FuncionId entityId, Caracteristica caracteristica, Descripcion descripcion){
+    public AgregarFuncion(EmpleadoId empleadoId, FuncionId entityId, Caracteristica caracteristica, Precio descripcion){
         this.empleadoId = empleadoId;
         this.entityId = entityId;
         this.caracteristica = caracteristica;
@@ -32,7 +32,7 @@ public class AgregarFuncion implements Command {
         return caracteristica;
     }
 
-    public Descripcion getDescripcion() {
+    public Precio getDescripcion() {
         return descripcion;
     }
 }

@@ -34,8 +34,6 @@ Y
 .src/main/java/factura/values/TipoProducto.java,3\3\33acafc1ca3be41fdd2e5a30c328f505b44d78f8
 a
 1src/main/java/empleado/values/Caracteristica.java,a\1\a1b12d9245d227af8cbc4d73a0751353298f61d0
-b
-2src/main/java/empleado/events/FuncionAgregada.java,3\3\335f6d531a63c0569c579d91301b1a34231ec6d3
 d
 4src/main/java/empleado/events/NombreActualizado.java,2\1\2157029e73b0aa0aa977dd9b250bd139378a431c
 f
