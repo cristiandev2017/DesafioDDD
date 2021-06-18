@@ -18,8 +18,6 @@ k
 ;src/main/java/domain/factura/events/DetalleActualizado.java,0\1\01ea8d750e004251df71ee0d1dc14fdfe3a494ef
 ^
 .src/main/java/domain/empleado/values/Edad.java,d\1\d1c06d0244db207a9ea923a154e528eba7354303
-g
-7src/main/java/domain/empleado/events/CargoAsociado.java,5\8\580fc0235cec0968753ec84d849c081399d915a6
 h
 8src/main/java/domain/empleado/events/CuentaAsociada.java,2\9\2954cb39bdb8a1cf82c057922a188e6dddff8366
 Z
