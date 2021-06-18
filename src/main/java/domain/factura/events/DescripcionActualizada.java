@@ -1,16 +1,16 @@
-package factura.events;
+package domain.factura.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import empleado.values.Precio;
+import domain.empleado.values.Descripcion;
 
 public class DescripcionActualizada extends DomainEvent {
-    private final Precio descripcion;
-    public DescripcionActualizada(Precio descripcion){
-        super("sofka.factura.descripcionactualizada");
+    private final Descripcion descripcion;
+    public DescripcionActualizada(Descripcion descripcion){
+        super("sofka.domain.factura.descripcionactualizada");
         this.descripcion = descripcion;
     }
 
-    public Precio getDescripcion() {
+    public Descripcion getDescripcion() {
         return descripcion;
     }
 }

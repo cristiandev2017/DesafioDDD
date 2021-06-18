@@ -1,9 +1,9 @@
-package empleado.events;
+package domain.empleado.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import empleado.Cargo;
-import empleado.Cuenta;
-import empleado.values.*;
+import domain.empleado.Cargo;
+import domain.empleado.Cuenta;
+import domain.empleado.values.*;
 
 public class EmpleadoCreado extends DomainEvent {
     private final Nombre nombre;
@@ -15,7 +15,7 @@ public class EmpleadoCreado extends DomainEvent {
     private final Cargo cargo;
 
     public EmpleadoCreado(Nombre nombre, Edad edad, Telefono telefono, Direccion direccion, Cuenta cuenta, Cargo cargo){
-        super("sofka.empleado.empleadocreado");
+        super("sofka.domain.empleado.empleadocreado");
         this.nombre = nombre;
         this.edad = edad;
         this.telefono = telefono;

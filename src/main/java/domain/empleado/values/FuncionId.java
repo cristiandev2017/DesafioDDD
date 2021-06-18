@@ -1,4 +1,4 @@
-package empleado.values;
+package domain.empleado.values;
 
 import co.com.sofka.domain.generic.Identity;
 

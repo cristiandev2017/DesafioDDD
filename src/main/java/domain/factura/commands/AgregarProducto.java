@@ -1,10 +1,10 @@
-package factura.commands;
+package domain.factura.commands;
 
 import co.com.sofka.domain.generic.Command;
-import empleado.values.Nombre;
-import factura.values.Existencia;
-import factura.values.FacturaId;
-import factura.values.ProductoId;
+import domain.empleado.values.Nombre;
+import domain.factura.values.Existencia;
+import domain.factura.values.FacturaId;
+import domain.factura.values.ProductoId;
 
 public class AgregarProducto implements Command {
     private final FacturaId facturaId;

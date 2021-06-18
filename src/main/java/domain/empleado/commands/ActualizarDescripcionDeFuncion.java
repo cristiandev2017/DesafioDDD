@@ -1,16 +1,16 @@
-package empleado.commands;
+package domain.empleado.commands;
 
 import co.com.sofka.domain.generic.Command;
-import empleado.values.Precio;
-import empleado.values.EmpleadoId;
-import empleado.values.FuncionId;
+import domain.empleado.values.Descripcion;
+import domain.empleado.values.EmpleadoId;
+import domain.empleado.values.FuncionId;
 
 public class ActualizarDescripcionDeFuncion implements Command {
     private final EmpleadoId empleadoId;
     private final FuncionId entityId;
-    private final Precio descripcion;
+    private final Descripcion descripcion;
 
-    public ActualizarDescripcionDeFuncion(EmpleadoId empleadoId, FuncionId entityId, Precio descripcion){
+    public ActualizarDescripcionDeFuncion(EmpleadoId empleadoId, FuncionId entityId, Descripcion descripcion){
         this.empleadoId = empleadoId;
         this.entityId = entityId;
         this.descripcion = descripcion;
@@ -24,7 +24,7 @@ public class ActualizarDescripcionDeFuncion implements Command {
         return entityId;
     }
 
-    public Precio getDescripcion() {
+    public Descripcion getDescripcion() {
         return descripcion;
     }
 }

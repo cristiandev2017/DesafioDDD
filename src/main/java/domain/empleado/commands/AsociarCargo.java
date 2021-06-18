@@ -1,8 +1,8 @@
-package empleado.commands;
+package domain.empleado.commands;
 
 import co.com.sofka.domain.generic.Command;
-import empleado.Cargo;
-import empleado.values.EmpleadoId;
+import domain.empleado.Cargo;
+import domain.empleado.values.EmpleadoId;
 
 public class AsociarCargo implements Command {
 

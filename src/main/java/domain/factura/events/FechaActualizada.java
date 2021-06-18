@@ -1,12 +1,12 @@
-package factura.events;
+package domain.factura.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import factura.values.Fecha;
+import domain.factura.values.Fecha;
 
 public class FechaActualizada extends DomainEvent {
     private final Fecha fecha;
     public FechaActualizada(Fecha fecha){
-        super("sofka.factura.fechaactualizado");
+        super("sofka.domain.factura.fechaactualizado");
         this.fecha = fecha;
     }
 

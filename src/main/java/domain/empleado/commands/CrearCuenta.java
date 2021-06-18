@@ -1,10 +1,10 @@
-package empleado.commands;
+package domain.empleado.commands;
 
 
 import co.com.sofka.domain.generic.Command;
-import empleado.values.CuentaId;
-import empleado.values.Email;
-import empleado.values.EmpleadoId;
+import domain.empleado.values.CuentaId;
+import domain.empleado.values.Email;
+import domain.empleado.values.EmpleadoId;
 
 
 public class CrearCuenta implements Command {

@@ -1,16 +1,16 @@
-package factura.commands;
+package domain.factura.commands;
 
 import co.com.sofka.domain.generic.Command;
-import empleado.values.Precio;
-import factura.values.FacturaId;
+import domain.empleado.values.Descripcion;
+import domain.factura.values.FacturaId;
 
 
 public class ActualizarPrecio implements Command {
 
     private final FacturaId facturaId;
-    private final Precio precio;
+    private final Descripcion precio;
 
-    public ActualizarPrecio(FacturaId facturaId, Precio descripcion){
+    public ActualizarPrecio(FacturaId facturaId, Descripcion descripcion){
         this.facturaId = facturaId;
         this.precio = descripcion;
     }
@@ -19,7 +19,7 @@ public class ActualizarPrecio implements Command {
         return facturaId;
     }
 
-    public Precio getPrecio() {
+    public Descripcion getPrecio() {
         return precio;
     }
 }

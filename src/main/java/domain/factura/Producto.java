@@ -1,9 +1,9 @@
-package factura;
+package domain.factura;
 
 import co.com.sofka.domain.generic.Entity;
-import empleado.values.Nombre;
-import factura.values.Existencia;
-import factura.values.ProductoId;
+import domain.empleado.values.Nombre;
+import domain.factura.values.Existencia;
+import domain.factura.values.ProductoId;
 
 public class Producto extends Entity<ProductoId> {
     private Nombre nombre;

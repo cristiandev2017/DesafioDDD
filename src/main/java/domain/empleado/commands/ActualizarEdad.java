@@ -1,8 +1,8 @@
-package empleado.commands;
+package domain.empleado.commands;
 
 import co.com.sofka.domain.generic.Command;
-import empleado.values.Edad;
-import empleado.values.EmpleadoId;
+import domain.empleado.values.Edad;
+import domain.empleado.values.EmpleadoId;
 
 public class ActualizarEdad implements Command {
 

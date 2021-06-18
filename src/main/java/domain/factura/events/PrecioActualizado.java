@@ -1,12 +1,12 @@
-package factura.events;
+package domain.factura.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import factura.values.Precio;
+import domain.factura.values.Precio;
 
 public class PrecioActualizado extends DomainEvent {
     private final Precio precio;
     public PrecioActualizado(Precio precio){
-        super("sofka.factura.precioactualizado");
+        super("sofka.domain.factura.precioactualizado");
         this.precio = precio;
     }
 

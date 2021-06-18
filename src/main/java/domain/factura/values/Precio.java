@@ -1,4 +1,4 @@
-package factura.values;
+package domain.factura.values;
 import co.com.sofka.domain.generic.ValueObject;
 
 import java.util.Objects;

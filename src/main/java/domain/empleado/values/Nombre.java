@@ -1,4 +1,4 @@
-package empleado.values;
+package domain.empleado.values;
 
 import co.com.sofka.domain.generic.ValueObject;
 
@@ -18,7 +18,9 @@ public class Nombre implements ValueObject<String> {
             throw new IllegalArgumentException("Debes de tener minimo 3 caracteres en el nombre");
         }
     }
+    @Override
     public String value(){return value;}
+
 
     @Override
     public boolean equals(Object o) {
@@ -32,4 +34,5 @@ public class Nombre implements ValueObject<String> {
     public int hashCode() {
         return Objects.hash(value);
     }
+
 }

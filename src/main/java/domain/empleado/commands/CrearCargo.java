@@ -1,11 +1,11 @@
-package empleado.commands;
+package domain.empleado.commands;
 
 
 import co.com.sofka.domain.generic.Command;
-import empleado.values.CargoId;
-import empleado.values.EmpleadoId;
-import empleado.values.Nombre;
-import empleado.values.TipoCargo;
+import domain.empleado.values.CargoId;
+import domain.empleado.values.EmpleadoId;
+import domain.empleado.values.Nombre;
+import domain.empleado.values.TipoCargo;
 
 public class CrearCargo implements Command {
     private final EmpleadoId empleadoId;

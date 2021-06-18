@@ -1,4 +1,4 @@
-package empleado.values;
+package domain.empleado.values;
 
 import co.com.sofka.domain.generic.ValueObject;
 
@@ -13,7 +13,7 @@ public class Telefono implements ValueObject<String> {
         if(this.value.isBlank()){
             throw new IllegalArgumentException("El telefono no puede estar vacia");
         }
-        if(this.value.length()<=8){
+        if(this.value.length()<6){
             throw new IllegalArgumentException("Debes de tener minimo 6 caracteres en el telefono");
         }
     }

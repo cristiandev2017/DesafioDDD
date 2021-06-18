@@ -1,9 +1,9 @@
-package empleado;
+package domain.empleado;
 
 import co.com.sofka.domain.generic.Entity;
-import empleado.values.CargoId;
-import empleado.values.Nombre;
-import empleado.values.TipoCargo;
+import domain.empleado.values.CargoId;
+import domain.empleado.values.Nombre;
+import domain.empleado.values.TipoCargo;
 
 public class Cargo extends Entity<CargoId> {
     private Nombre nombre;

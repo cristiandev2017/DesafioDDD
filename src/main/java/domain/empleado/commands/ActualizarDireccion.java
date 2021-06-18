@@ -1,9 +1,8 @@
-package empleado.commands;
+package domain.empleado.commands;
 
 import co.com.sofka.domain.generic.Command;
-import empleado.values.Direccion;
-import empleado.values.EmpleadoId;
-import empleado.values.Telefono;
+import domain.empleado.values.Direccion;
+import domain.empleado.values.EmpleadoId;
 
 public class ActualizarDireccion implements Command {
 

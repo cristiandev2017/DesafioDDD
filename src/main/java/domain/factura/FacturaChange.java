@@ -1,7 +1,7 @@
-package factura;
+package domain.factura;
 
 import co.com.sofka.domain.generic.EventChange;
-import factura.events.*;
+import domain.factura.events.*;
 
 
 public class FacturaChange extends EventChange {

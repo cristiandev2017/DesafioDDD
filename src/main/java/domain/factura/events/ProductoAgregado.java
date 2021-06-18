@@ -1,9 +1,9 @@
-package factura.events;
+package domain.factura.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import empleado.values.Nombre;
-import factura.values.Existencia;
-import factura.values.ProductoId;
+import domain.empleado.values.Nombre;
+import domain.factura.values.Existencia;
+import domain.factura.values.ProductoId;
 
 public class ProductoAgregado extends DomainEvent {
     private final ProductoId productoId;
@@ -11,7 +11,7 @@ public class ProductoAgregado extends DomainEvent {
     private final Existencia existencia;
 
     public ProductoAgregado(ProductoId productoId, Nombre nombre, Existencia existencia){
-        super("sofka.factura.productoagregado");
+        super("sofka.domain.factura.productoagregado");
         this.productoId = productoId;
         this.nombre = nombre;
         this.existencia = existencia;

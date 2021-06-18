@@ -1,21 +1,23 @@
-package factura.events;
+package domain.factura.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import empleado.values.Precio;
-import empleado.values.EmpleadoId;
-import factura.Cliente;
-import factura.Pedido;
+import domain.empleado.values.Descripcion;
+import domain.empleado.values.EmpleadoId;
+import domain.factura.Cliente;
+import domain.factura.Pedido;
+import domain.factura.values.Fecha;
+import domain.factura.values.Precio;
 
 public class FacturaCreada extends DomainEvent {
-    private final Precio descripcion;
-    private final factura.values.Fecha fecha;
-    private final factura.values.Precio precio;
+    private final Descripcion descripcion;
+    private final Fecha fecha;
+    private final Precio precio;
     private final Pedido pedido;
     private final Cliente cliente;
     private final EmpleadoId empleadoId;
 
-    public FacturaCreada(Precio descripcion, factura.values.Fecha fecha, factura.values.Precio precio, Pedido pedido, Cliente cliente, EmpleadoId empleadoId){
-        super("sofka.factura.facturacreada");
+    public FacturaCreada(Descripcion descripcion,Fecha fecha, Precio precio, Pedido pedido, Cliente cliente, EmpleadoId empleadoId){
+        super("sofka.domain.factura.facturacreada");
         this.descripcion = descripcion;
         this.fecha = fecha;
         this.precio = precio;
@@ -24,15 +26,15 @@ public class FacturaCreada extends DomainEvent {
         this.empleadoId = empleadoId;
     }
 
-    public Precio getDescripcion() {
+    public Descripcion getDescripcion() {
         return descripcion;
     }
 
-    public factura.values.Fecha getFecha() {
+    public Fecha getFecha() {
         return fecha;
     }
 
-    public factura.values.Precio getPrecio() {
+    public Precio getPrecio() {
         return precio;
     }
 

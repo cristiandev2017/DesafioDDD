@@ -1,15 +1,15 @@
-package empleado.events;
+package domain.empleado.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import empleado.values.Email;
-import empleado.values.FuncionId;
+import domain.empleado.values.Email;
+import domain.empleado.values.FuncionId;
 
 public class EmailCuentaActualizado extends DomainEvent {
     private final FuncionId entityId;
     private final Email email;
 
     public EmailCuentaActualizado(FuncionId entityId, Email email){
-        super("sofka.empleado.emailcuentaactualizado");
+        super("sofka.domain.empleado.emailcuentaactualizado");
         this.entityId = entityId;
         this.email = email;
     }

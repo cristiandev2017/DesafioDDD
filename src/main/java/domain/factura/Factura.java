@@ -1,12 +1,12 @@
-package factura;
+package domain.factura;
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
-import empleado.values.Precio;
-import empleado.values.EmpleadoId;
-import empleado.values.Nombre;
-import factura.events.*;
-import factura.values.*;
+import domain.empleado.values.Descripcion;
+import domain.empleado.values.EmpleadoId;
+import domain.empleado.values.Nombre;
+import domain.factura.events.*;
+import domain.factura.values.*;
 
 import java.util.List;
 import java.util.Objects;
@@ -14,9 +14,9 @@ import java.util.Optional;
 import java.util.Set;
 
 public class Factura extends AggregateEvent<FacturaId> {
-    protected Precio descripcion;
-    protected factura.values.Fecha fecha;
-    protected factura.values.Precio precio;
+    protected Descripcion descripcion;
+    protected Fecha fecha;
+    protected Precio precio;
     protected EmpleadoId empleadoId;
     //Relacionados
     protected Pedido pedido;
@@ -24,7 +24,7 @@ public class Factura extends AggregateEvent<FacturaId> {
     protected Set<Producto> productos;
 
     //Constructor inicial
-    public Factura(FacturaId entityId, Precio descripcion, factura.values.Fecha fecha, factura.values.Precio precio, Pedido pedido, Cliente cliente, EmpleadoId empleadoId){
+    public Factura(FacturaId entityId, Descripcion descripcion, Fecha fecha, Precio precio, Pedido pedido, Cliente cliente, EmpleadoId empleadoId){
         super(entityId);
         appendChange(new FacturaCreada(descripcion, fecha, precio,pedido,cliente, empleadoId)).apply();
     }
@@ -50,17 +50,17 @@ public class Factura extends AggregateEvent<FacturaId> {
     }
 
     //Actualizar Descripcion
-    public void actualizarDescripcion(Precio descripcion){
+    public void actualizarDescripcion(Descripcion descripcion){
         appendChange(new DescripcionActualizada(descripcion)).apply();
     }
 
     //Actualizar Precio
-    public void actualizarPrecio(factura.values.Precio precio){
+    public void actualizarPrecio(domain.factura.values.Precio precio){
         appendChange(new PrecioActualizado(precio)).apply();
     }
 
     //Actualizar Fecha
-    public void actualizarFecha(factura.values.Fecha fecha){
+    public void actualizarFecha(domain.factura.values.Fecha fecha){
         appendChange(new FechaActualizada(fecha)).apply();
     }
 
@@ -84,15 +84,15 @@ public class Factura extends AggregateEvent<FacturaId> {
                 .findFirst();
     }
 
-    public Precio getDescripcion() {
+    public Descripcion getDescripcion() {
         return descripcion;
     }
 
-    public factura.values.Fecha getFecha() {
+    public domain.factura.values.Fecha getFecha() {
         return fecha;
     }
 
-    public factura.values.Precio getPrecio() {
+    public domain.factura.values.Precio getPrecio() {
         return precio;
     }
 

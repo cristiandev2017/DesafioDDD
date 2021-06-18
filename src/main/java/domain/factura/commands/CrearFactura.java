@@ -1,22 +1,24 @@
-package factura.commands;
+package domain.factura.commands;
 
 import co.com.sofka.domain.generic.Command;
-import empleado.values.Precio;
-import empleado.values.EmpleadoId;
-import factura.Cliente;
-import factura.Pedido;
-import factura.values.FacturaId;
+import domain.empleado.values.Descripcion;
+import domain.empleado.values.EmpleadoId;
+import domain.factura.Cliente;
+import domain.factura.Pedido;
+import domain.factura.values.FacturaId;
+import domain.factura.values.Fecha;
+import domain.factura.values.Precio;
 
 public class CrearFactura implements Command {
     private final FacturaId entityId;
-    private final factura.values.Fecha fecha;
-    private final Precio descripcion;
-    private final factura.values.Precio precio;
+    private final Fecha fecha;
+    private final Descripcion descripcion;
+    private final Precio precio;
     private final Pedido pedido;
     private final Cliente cliente;
     private final EmpleadoId empleadoId;
 
-    public CrearFactura(FacturaId entityId, Precio descripcion, factura.values.Fecha fecha, factura.values.Precio precio, Pedido pedido, Cliente cliente, EmpleadoId empleadoId){
+    public CrearFactura(FacturaId entityId, Descripcion descripcion, Fecha fecha, Precio precio, Pedido pedido, Cliente cliente, EmpleadoId empleadoId){
         this.entityId = entityId;
         this.descripcion = descripcion;
         this.fecha = fecha;
@@ -30,15 +32,15 @@ public class CrearFactura implements Command {
         return entityId;
     }
 
-    public factura.values.Fecha getFecha() {
+    public Fecha getFecha() {
         return fecha;
     }
 
-    public Precio getDescripcion() {
+    public Descripcion getDescripcion() {
         return descripcion;
     }
 
-    public factura.values.Precio getPrecio() {
+    public Precio getPrecio() {
         return precio;
     }
 

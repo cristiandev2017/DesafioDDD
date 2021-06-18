@@ -1,12 +1,12 @@
-package empleado.events;
+package domain.empleado.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import empleado.values.Nombre;
+import domain.empleado.values.Nombre;
 
 public class NombreActualizado extends DomainEvent {
     private final Nombre nombre;
     public NombreActualizado(Nombre nombre){
-        super("sofka.empleado.nombre");
+        super("sofka.domain.empleado.nombre");
         this.nombre =nombre;
     }
 

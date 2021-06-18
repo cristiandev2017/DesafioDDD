@@ -1,17 +1,17 @@
-package empleado;
+package domain.empleado;
 
 import co.com.sofka.domain.generic.Entity;
-import empleado.values.Caracteristica;
-import empleado.values.Precio;
-import empleado.values.FuncionId;
+import domain.empleado.values.Caracteristica;
+import domain.empleado.values.Descripcion;
+import domain.empleado.values.FuncionId;
 
 import java.util.Objects;
 
 public class Funcion extends Entity<FuncionId> {
     private Caracteristica caracteristica;
-    private Precio descripcion;
+    private Descripcion descripcion;
 
-    public Funcion(FuncionId entityId, Caracteristica caracteristica, Precio descripcion){
+    public Funcion(FuncionId entityId, Caracteristica caracteristica, Descripcion descripcion){
         super(entityId);
         this.caracteristica = caracteristica;
         this.descripcion = descripcion;
@@ -21,7 +21,7 @@ public class Funcion extends Entity<FuncionId> {
         this.caracteristica = Objects.requireNonNull(caracteristica);
     }
 
-    public void actualizarDescripcion(Precio descripcion){
+    public void actualizarDescripcion(Descripcion descripcion){
         this.descripcion = Objects.requireNonNull(descripcion);
     }
 
@@ -29,7 +29,7 @@ public class Funcion extends Entity<FuncionId> {
         return caracteristica;
     }
 
-    public Precio descripcion() {
+    public Descripcion descripcion() {
         return descripcion;
     }
 }

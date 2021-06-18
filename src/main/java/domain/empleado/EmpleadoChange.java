@@ -1,12 +1,12 @@
-package empleado;
+package domain.empleado;
 
 import co.com.sofka.domain.generic.EventChange;
-import empleado.events.*;
+import domain.empleado.events.*;
 
 public class EmpleadoChange extends EventChange {
 
     public EmpleadoChange(Empleado empleado){
-        //Crear empleado
+        //Crear domain.empleado
         apply((EmpleadoCreado event)->{
            empleado.nombre = event.getNombre();
            empleado.edad = event.getEdad();
@@ -38,14 +38,14 @@ public class EmpleadoChange extends EventChange {
         //Descripcion funcion actualizada
         apply((DescripcionFuncionActualizada event) -> {
             var funcion = empleado.getFuncionPorId(event.getFuncionId())
-                    .orElseThrow(() -> new IllegalArgumentException("No se encuenta la funcion del empleado"));
+                    .orElseThrow(() -> new IllegalArgumentException("No se encuenta la funcion del domain.empleado"));
             funcion.actualizarDescripcion(event.getDescripcion());
         });
 
         //Caracteristica funcion actualizada
         apply((CaracteristicaFuncionActualizado event) -> {
             var funcion = empleado.getFuncionPorId(event.getFuncionId())
-                    .orElseThrow(() -> new IllegalArgumentException("No se encuenta la funcion del empleado"));
+                    .orElseThrow(() -> new IllegalArgumentException("No se encuenta la funcion del domain.empleado"));
             funcion.actualizarCaracteristica(event.getCaracteristica());
         });
 
@@ -57,6 +57,11 @@ public class EmpleadoChange extends EventChange {
         //Actualizar Nombre
         apply((NombreActualizado event)->{
             empleado.nombre = event.getNombre();
+        });
+
+        //Actualizar Direccion
+        apply((DireccionActualizada event)->{
+            empleado.direccion = event.getDireccion();
         });
 
         //Actualizar Telefono

@@ -1,13 +1,12 @@
-package empleado.events;
+package domain.empleado.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import empleado.Cuenta;
-import empleado.values.CuentaId;
+import domain.empleado.Cuenta;
 
 public class CuentaAsociada extends DomainEvent {
     private final Cuenta cuenta;
     public CuentaAsociada(Cuenta cuenta){
-        super("sofka.empleado.cuentaasociada");
+        super("sofka.domain.empleado.cuentaasociada");
         this.cuenta = cuenta;
     }
 

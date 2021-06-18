@@ -1,15 +1,15 @@
-package factura.events;
+package domain.factura.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import factura.values.Detalle;
-import factura.values.PedidoId;
+import domain.factura.values.Detalle;
+import domain.factura.values.PedidoId;
 
 public class PedidoCreado extends DomainEvent{
     private final PedidoId pedidoId;
     private final Detalle detalle;
 
     public PedidoCreado(PedidoId pedidoId, Detalle detalle){
-        super("sofka.factura.pedidocreado");
+        super("sofka.domain.factura.pedidocreado");
         this.pedidoId = pedidoId;
         this.detalle = detalle;
     }

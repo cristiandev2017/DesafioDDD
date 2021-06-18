@@ -1,4 +1,4 @@
-package empleado.values;
+package domain.empleado.values;
 
 import co.com.sofka.domain.generic.ValueObject;
 
@@ -16,7 +16,7 @@ public class Email implements ValueObject<String> {
         }
 
         if(!this.value.matches("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$")){
-            throw new IllegalArgumentException("Emaul no valido");
+            throw new IllegalArgumentException("Email no valido");
         }
     }
 

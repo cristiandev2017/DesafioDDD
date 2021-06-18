@@ -1,9 +1,9 @@
-package empleado.commands;
+package domain.empleado.commands;
 
 import co.com.sofka.domain.generic.Command;
-import empleado.values.Caracteristica;
-import empleado.values.EmpleadoId;
-import empleado.values.FuncionId;
+import domain.empleado.values.Caracteristica;
+import domain.empleado.values.EmpleadoId;
+import domain.empleado.values.FuncionId;
 
 public class ActualizarCaracteristicaDeFuncion implements Command {
     private final EmpleadoId empleadoId;

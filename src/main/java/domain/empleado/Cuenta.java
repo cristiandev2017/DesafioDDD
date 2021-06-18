@@ -1,8 +1,8 @@
-package empleado;
+package domain.empleado;
 
 import co.com.sofka.domain.generic.Entity;
-import empleado.values.CuentaId;
-import empleado.values.Email;
+import domain.empleado.values.CuentaId;
+import domain.empleado.values.Email;
 
 public class Cuenta extends Entity<CuentaId> {
     private Email email;

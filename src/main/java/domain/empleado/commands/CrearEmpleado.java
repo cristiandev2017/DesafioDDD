@@ -1,9 +1,9 @@
-package empleado.commands;
+package domain.empleado.commands;
 
 import co.com.sofka.domain.generic.Command;
-import empleado.Cargo;
-import empleado.Cuenta;
-import empleado.values.*;
+import domain.empleado.Cargo;
+import domain.empleado.Cuenta;
+import domain.empleado.values.*;
 
 public class CrearEmpleado implements Command {
     private final EmpleadoId entityId;

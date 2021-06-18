@@ -1,9 +1,9 @@
-package empleado;
+package domain.empleado;
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
-import empleado.events.*;
-import empleado.values.*;
+import domain.empleado.events.*;
+import domain.empleado.values.*;
 
 import java.util.List;
 import java.util.Objects;
@@ -44,12 +44,16 @@ public class Empleado extends AggregateEvent<EmpleadoId> {
         appendChange(new CaracteristicaFuncionActualizado(entityId,caracteristica));
     }
 
-    public void actualizarDescripcionDeFuncion(FuncionId entityId, Precio descripcion){
+    public void actualizarDescripcionDeFuncion(FuncionId entityId, Descripcion descripcion){
         appendChange(new DescripcionFuncionActualizada(entityId,descripcion));
     }
 
     public void actualizarNombre(Nombre nombre){
         appendChange(new NombreActualizado(nombre)).apply();
+    }
+
+    public void actualizarDireccion(Direccion direccion){
+        appendChange(new DireccionActualizada(direccion)).apply();
     }
 
     public void actualizarEdad(Edad edad){
@@ -60,7 +64,7 @@ public class Empleado extends AggregateEvent<EmpleadoId> {
         appendChange(new TelefonoActualizado(telefono)).apply();
     }
 
-    public void agregarFuncion(FuncionId entityId, Caracteristica caracteristica, Precio descripcion){
+    public void agregarFuncion(FuncionId entityId, Caracteristica caracteristica, Descripcion descripcion){
         Objects.requireNonNull(entityId);
         Objects.requireNonNull(caracteristica);
         Objects.requireNonNull(descripcion);

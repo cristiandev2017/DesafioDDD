@@ -1,17 +1,17 @@
-package empleado.events;
+package domain.empleado.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import empleado.values.Caracteristica;
-import empleado.values.Precio;
-import empleado.values.FuncionId;
+import domain.empleado.values.Caracteristica;
+import domain.empleado.values.Descripcion;
+import domain.empleado.values.FuncionId;
 
 public class FuncionAgregada extends DomainEvent {
     private final FuncionId funcionId;
     private final Caracteristica caracteristica;
-    private Precio descripcion;
+    private Descripcion descripcion;
 
-    public FuncionAgregada(FuncionId funcionId, Caracteristica caracteristica, Precio descripcion){
-        super("sofka.empleado.funcionagregada");
+    public FuncionAgregada(FuncionId funcionId, Caracteristica caracteristica, Descripcion descripcion){
+        super("sofka.domain.empleado.funcionagregada");
         this.funcionId = funcionId;
         this.caracteristica = caracteristica;
         this.descripcion = descripcion;
@@ -25,7 +25,7 @@ public class FuncionAgregada extends DomainEvent {
         return caracteristica;
     }
 
-    public Precio getDescripcion() {
+    public Descripcion getDescripcion() {
         return descripcion;
     }
 }

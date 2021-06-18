@@ -1,12 +1,12 @@
-package empleado.events;
+package domain.empleado.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
-import empleado.values.Edad;
+import domain.empleado.values.Edad;
 
 public class EdadActualizada extends DomainEvent {
     private final Edad edad;
     public EdadActualizada(Edad edad){
-        super("sofka.empleado.edadactualizada");
+        super("sofka.domain.empleado.edadactualizada");
         this.edad = edad;
     }
 
