@@ -15,11 +15,11 @@ public class Producto extends Entity<ProductoId> {
         this.existencia = existencia;
     }
 
-    public Nombre getNombre() {
+    public Nombre nombre() {
         return nombre;
     }
 
-    public Existencia getExistencia() {
+    public Existencia existencia() {
         return existencia;
     }
 }

@@ -1,10 +1,7 @@
 package empleado;
 
 import co.com.sofka.domain.generic.EventChange;
-import empleado.events.CargoAsociado;
-import empleado.events.CargoCreado;
-import empleado.events.CuentaAsociada;
-import empleado.events.EmpleadoCreado;
+import empleado.events.*;
 
 public class EmpleadoChange extends EventChange {
 
@@ -28,5 +25,52 @@ public class EmpleadoChange extends EventChange {
             empleado.cargo = new Cargo(event.getCargoId(),event.getNombre(),event.getTipoCargo());
         });
 
+        //Asociar Cuenta
+        apply((CuentaAsociada event)->{
+            empleado.cuenta = event.getCuenta();
+        });
+
+        //Crear cuenta
+        apply((CuentaCreada event)->{
+            empleado.cuenta = new Cuenta(event.getCuentaId(),event.getEmail());
+        });
+
+        //Descripcion funcion actualizada
+        apply((DescripcionFuncionActualizada event) -> {
+            var funcion = empleado.getFuncionPorId(event.getFuncionId())
+                    .orElseThrow(() -> new IllegalArgumentException("No se encuenta la funcion del empleado"));
+            funcion.actualizarDescripcion(event.getDescripcion());
+        });
+
+        //Caracteristica funcion actualizada
+        apply((CaracteristicaFuncionActualizado event) -> {
+            var funcion = empleado.getFuncionPorId(event.getFuncionId())
+                    .orElseThrow(() -> new IllegalArgumentException("No se encuenta la funcion del empleado"));
+            funcion.actualizarCaracteristica(event.getCaracteristica());
+        });
+
+        //Actualizar Edad
+        apply((EdadActualizada event)->{
+           empleado.edad = event.getEdad();
+        });
+
+        //Actualizar Nombre
+        apply((NombreActualizado event)->{
+            empleado.nombre = event.getNombre();
+        });
+
+        //Actualizar Telefono
+        apply((TelefonoActualizado event)->{
+            empleado.telefono = event.getTelefono();
+        });
+
+        //Agregar funcion
+        apply((FuncionAgregada event) -> {
+            empleado.funciones.add(new Funcion(
+                    event.getFuncionId(),
+                    event.getCaracteristica(),
+                    event.getDescripcion()
+            ));
+        });
     }
 }

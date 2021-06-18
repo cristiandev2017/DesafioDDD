@@ -40,9 +40,5 @@ d
 4src/main/java/empleado/events/NombreActualizado.java,2\1\2157029e73b0aa0aa977dd9b250bd139378a431c
 f
 6src/main/java/empleado/events/TelefonoActualizado.java,b\e\be2dc717dd676da760ac6ab6c0a1e58254058f3c
-s
-Csrc/main/java/empleado/events/CaracteristicaFuncionActualizado.java,7\0\703016fbfc7da397ab35f83d6412d8638fff26b4
 i
 9src/main/java/empleado/events/EmailCuentaActualizado.java,4\5\4559ada5d39584777e45f90461d51d058b21c34f
-p
-@src/main/java/empleado/events/DescripcionFuncionActualizada.java,a\1\a1a2ccfe05fb5f9ffc81cfe44c4768de8043e5a5

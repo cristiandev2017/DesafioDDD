@@ -14,7 +14,7 @@ public class CaracteristicaFuncionActualizado extends DomainEvent {
         this.caracteristica = caracteristica;
     }
 
-    public FuncionId getEntityId() {
+    public FuncionId getFuncionId() {
         return entityId;
     }
 

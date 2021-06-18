@@ -5,6 +5,8 @@ import empleado.values.Caracteristica;
 import empleado.values.Descripcion;
 import empleado.values.FuncionId;
 
+import java.util.Objects;
+
 public class Funcion extends Entity<FuncionId> {
     private Caracteristica caracteristica;
     private Descripcion descripcion;
@@ -13,6 +15,14 @@ public class Funcion extends Entity<FuncionId> {
         super(entityId);
         this.caracteristica = caracteristica;
         this.descripcion = descripcion;
+    }
+
+    public void actualizarCaracteristica(Caracteristica caracteristica){
+        this.caracteristica = Objects.requireNonNull(caracteristica);
+    }
+
+    public void actualizarDescripcion(Descripcion descripcion){
+        this.descripcion = Objects.requireNonNull(descripcion);
     }
 
     public Caracteristica caracteristica() {

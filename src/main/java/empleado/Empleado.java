@@ -2,10 +2,12 @@ package empleado;
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
-import empleado.events.EmpleadoCreado;
+import empleado.events.*;
 import empleado.values.*;
 
 import java.util.List;
+import java.util.Objects;
+import java.util.Optional;
 import java.util.Set;
 
 public class Empleado extends AggregateEvent<EmpleadoId> {
@@ -35,6 +37,57 @@ public class Empleado extends AggregateEvent<EmpleadoId> {
     private Empleado(EmpleadoId entityId){
         super(entityId);
         subscribe(new EmpleadoChange(this));
+    }
+
+    //Ahora se pondran los eventos
+    public void actualizarCaracteristicaDeFuncion(FuncionId entityId,Caracteristica caracteristica){
+        appendChange(new CaracteristicaFuncionActualizado(entityId,caracteristica));
+    }
+
+    public void actualizarDescripcionDeFuncion(FuncionId entityId,Descripcion descripcion){
+        appendChange(new DescripcionFuncionActualizada(entityId,descripcion));
+    }
+
+    public void actualizarNombre(Nombre nombre){
+        appendChange(new NombreActualizado(nombre)).apply();
+    }
+
+    public void actualizarEdad(Edad edad){
+        appendChange(new EdadActualizada(edad)).apply();
+    }
+
+    public void actualizarTelefono(Telefono telefono){
+        appendChange(new TelefonoActualizado(telefono)).apply();
+    }
+
+    public void agregarFuncion(FuncionId entityId, Caracteristica caracteristica, Descripcion descripcion){
+        Objects.requireNonNull(entityId);
+        Objects.requireNonNull(caracteristica);
+        Objects.requireNonNull(descripcion);
+        appendChange(new FuncionAgregada(entityId,caracteristica,descripcion)).apply();
+    }
+
+    public void asociarCargo(Cargo cargo){
+        appendChange(new CargoAsociado(cargo)).apply();
+    }
+
+    public void crearCargo(CargoId cargoId, Nombre nombre, TipoCargo tipoCargo){appendChange(new CargoCreado(cargoId,nombre,tipoCargo)).apply(); }
+
+    public void asociarCuenta( Cuenta cuenta){
+        appendChange(new CuentaAsociada(cuenta)).apply();
+    }
+
+
+
+    protected Optional<Funcion> getFuncionPorId(FuncionId entityId){
+        return funciones()
+                .stream()
+                .filter(funcion-> funcion.identity().equals(entityId))
+                .findFirst();
+    }
+
+    public Set<Funcion> funciones(){
+        return funciones;
     }
 
 }

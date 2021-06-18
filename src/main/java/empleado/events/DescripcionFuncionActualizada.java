@@ -14,7 +14,7 @@ public class DescripcionFuncionActualizada extends DomainEvent {
         this.descripcion = descripcion;
     }
 
-    public FuncionId getEntityId() {
+    public FuncionId getFuncionId() {
         return entityId;
     }
 
