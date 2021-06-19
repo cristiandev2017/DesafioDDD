@@ -8,11 +8,9 @@ import domain.empleado.values.CuentaId;
 import domain.empleado.values.Email;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.internal.matchers.Any;
 
 import static org.mockito.ArgumentMatchers.any;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 class NotificarCorreoUseCaseTest {
