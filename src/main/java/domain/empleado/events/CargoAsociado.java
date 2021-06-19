@@ -2,6 +2,7 @@ package domain.empleado.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
 import domain.empleado.Cargo;
+import domain.empleado.values.EmpleadoId;
 
 public class CargoAsociado extends DomainEvent {
     private final Cargo cargo;
@@ -13,4 +14,5 @@ public class CargoAsociado extends DomainEvent {
     public Cargo getCargo() {
         return cargo;
     }
+
 }

@@ -20,6 +20,7 @@ public class Empleado extends AggregateEvent<EmpleadoId> {
     protected Set<Funcion> funciones;
     protected Cuenta cuenta;
     protected Cargo cargo;
+    protected CargoId cargoId;
 
     public Empleado(EmpleadoId entityId,Nombre nombre, Edad edad, Telefono telefono, Direccion direccion, Cuenta cuenta, Cargo cargo) {
         super(entityId);

@@ -18,8 +18,6 @@ k
 ;src/main/java/domain/factura/events/DetalleActualizado.java,0\1\01ea8d750e004251df71ee0d1dc14fdfe3a494ef
 ^
 .src/main/java/domain/empleado/values/Edad.java,d\1\d1c06d0244db207a9ea923a154e528eba7354303
-h
-8src/main/java/domain/empleado/events/CuentaAsociada.java,2\9\2954cb39bdb8a1cf82c057922a188e6dddff8366
 Z
 *src/main/java/domain/empleado/Funcion.java,5\f\5f24609a600ad85632cffbabdf71779473f7119f
 j
@@ -44,8 +42,6 @@ z
 Jsrc/main/java/domain/empleado/events/CaracteristicaFuncionActualizado.java,1\9\191b7b430a2e47cd04c3ba0ed2ee29d861f300a9
 c
 3src/main/java/domain/factura/values/Existencia.java,6\0\605441f133b1c0f903f890cdc9a8f6862474f0c0
-Y
-)src/main/java/domain/empleado/Cuenta.java,7\d\7d3f98ff93008dcd619e02206377cc1e656b5e7a
 h
 8src/main/java/domain/empleado/commands/AsociarCargo.java,4\2\42e7110aedf98ccee415c7e317438d7835ce8c14
 }
@@ -72,5 +68,3 @@ _
 /src/main/java/domain/empleado/values/Email.java,a\e\ae740ae7836e310f5ee9b489680bb340e6bca865
 b
 2src/main/java/domain/empleado/values/Telefono.java,f\b\fb899a602efad3fdea0948923d97921e438dc39a
-f
-6src/main/java/domain/empleado/events/CuentaCreada.java,c\7\c74366eee90b9a3ebcce9c94b5f29f9f5dd8d8fd
